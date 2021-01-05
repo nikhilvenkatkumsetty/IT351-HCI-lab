@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>GUI</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="javascript" href="main.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div id="container">
+		<h2 id = "tst">Look at the given list of animals and try to recall as many as possible. Click start to begin.</h2>
+		<button type="button" id="b1" onclick="myFunction()">START</button>
+	</div>
+	<div id="Div-B" style="display:none;">
+		<h2 id = "header">Choose the animal names that you remember from the list</h2>
+		<div id="list1" class="dropdown-check-list" tabindex="100">
+  			<ul class="items">
+			    <li id="t1"><input type="checkbox" id="l1">PARROT</li>
+			    <li id="t2"><input type="checkbox" id="l2">BUFFALO </li>
+			    <li id="t3"><input type="checkbox" id="l3">DOG </li>
+			    <li id="t4"><input type="checkbox" id="l4">CHEETAH </li>
+			    <li id="t5"><input type="checkbox" id="l5">COW </li>
+			    <li id="t6"><input type="checkbox" id="l6">JAQUAR</li>
+			    <li id="t7"><input type="checkbox" id="l7">LION </li>
+			    <li id="t8"><input type="checkbox" id="l8">TIGER </li>
+			    <li id="t9"><input type="checkbox" id="l9">WHALE </li>
+			    <li id="t10"><input type="checkbox" id="l10">MOOSE </li>
+			    <li id="t11"><input type="checkbox" id="l11">GOOSE </li>
+			    <li id="t12"><input type="checkbox" id="l12">HORSE </li>
+			    <li id="t13"><input type="checkbox" id="l13">LEOPARD</li>
+  			</ul>
+  			<button type="submit" id="b2" onclick="myFunction1()">SUBMIT</button>
+		</div>
+	</div> 
+	<script type="text/javascript" src="main.js">
+		var checkList = document.getElementById('list1');
+        checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+        if (checkList.classList.contains('visible'))
+           checkList.classList.remove('visible');
+        else
+           checkList.classList.add('visible');}
+	</script>
+
+</body>
+</html>
